@@ -1,0 +1,3 @@
+destribuição ubuntu
+versao desktop
+versao servidor
