@@ -1,0 +1,103 @@
+1. Criar um Arquivo .txt
+Para criar um arquivo de texto vazio, você pode usar o comando touch:
+
+bashComandoAbaixo
+-----------------
+touch arquivo.txt
+Alternativamente, você pode criar o arquivo e adicionar conteúdo diretamente com o comando echo:
+
+bashComandoAbaixo
+-----------------
+echo "Este é o conteúdo do arquivo." > arquivo.txt
+2. Visualizar um Arquivo .txt
+Existem várias maneiras de visualizar o conteúdo de um arquivo .txt no Linux:
+
+cat: Mostra o conteúdo completo do arquivo.
+
+bashComandoAbaixo
+-----------------
+cat arquivo.txt
+less ou more: Permitem navegar pelo conteúdo (especialmente útil para arquivos grandes).
+
+bashComandoAbaixo
+-----------------
+less arquivo.txt
+Use as teclas q para sair e setas para rolar.
+
+head: Mostra as primeiras 10 linhas por padrão (útil para visualizar rapidamente).
+
+bashComandoAbaixo
+-----------------
+head arquivo.txt
+tail: Mostra as últimas 10 linhas por padrão (útil para logs).
+
+bashComandoAbaixo
+-----------------
+tail arquivo.txt
+3. Editar um Arquivo .txt
+Alguns editores de texto comuns no Linux incluem:
+
+nano: Um editor simples e fácil de usar.
+
+bashComandoAbaixo
+-----------------
+nano arquivo.txt
+vim: Um editor avançado, popular entre programadores e usuários avançados.
+
+bashComandoAbaixo
+-----------------
+vim arquivo.txt
+Para começar a editar, pressione i.
+Para salvar e sair, pressione Esc, digite
+e pressione Enter.
+gedit: Um editor de texto com interface gráfica (para distribuições que têm ambiente gráfico).
+
+bashComandoAbaixo
+-----------------
+gedit arquivo.txt &
+4. Adicionar Conteúdo a um Arquivo .txt
+Para acrescentar conteúdo a um arquivo existente, use o operador >>:
+
+bashComandoAbaixo
+-----------------
+echo "Conteúdo adicional" >> arquivo.txt
+5. Procurar Texto em um Arquivo
+Para buscar por palavras ou padrões específicos dentro do arquivo, você pode usar o comando grep:
+
+bashComandoAbaixo
+-----------------
+grep "palavra-chave" arquivo.txt
+Para ignorar maiúsculas e minúsculas na busca, use -i:
+
+bashComandoAbaixo
+-----------------
+grep -i "palavra-chave" arquivo.txt
+6. Contar Linhas, Palavras e Caracteres
+Use o comando wc para contar palavras, linhas e caracteres no arquivo:
+
+bashComandoAbaixo
+-----------------
+wc arquivo.txt
+# Exemplo de saída: "3 9 53 arquivo.txt" (linhas, palavras, caracteres)
+Para contar linhas específicas:
+
+bashComandoAbaixo
+-----------------
+wc -l arquivo.txt
+7. Copiar, Mover e Excluir Arquivos .txt
+Copiar:
+
+bashComandoAbaixo
+-----------------
+cp arquivo.txt copia_arquivo.txt
+Mover:
+
+bashComandoAbaixo
+-----------------
+mv arquivo.txt nova_pasta/arquivo.txt
+Excluir:
+
+bashComandoAbaixo
+-----------------
+rm arquivo.txt
+Esses comandos e ferramentas facilitam a manipulação de arquivos .txt no Linux, ajudando na organização e edição de arquivos diretamente no terminal.

@@ -1,0 +1,61 @@
+Adicionar usuários em um sistema Linux pode ser feito de várias maneiras, dependendo da distribuição e das suas permissões. O comando mais comum para adicionar usuários é o useradd. Aqui estão os passos e exemplos para adicionar usuários no Linux:
+
+Usando o Comando useradd
+Abrir o Terminal: Acesse o terminal em seu sistema Linux.
+
+Adicionar um Novo Usuário:
+
+A sintaxe básica do comando é:
+bashComandoAbaixo
+---------------------------------------------------------------------
+sudo useradd [opções] nome_do_usuario
+Exemplo:
+bashComandoAbaixo
+---------------------------------------------------------------------
+sudo useradd novo_usuario
+Definir uma Senha para o Novo Usuário:
+
+Após adicionar o usuário, você deve definir uma senha usando o comando passwd:
+bashComandoAbaixo
+---------------------------------------------------------------------
+sudo passwd novo_usuario
+Exemplo Completo:
+
+bashComandoAbaixo
+---------------------------------------------------------------------
+sudo useradd novo_usuario
+sudo passwd novo_usuario
+Opções Comuns do Comando useradd
+-m: Cria um diretório home para o novo usuário.
+-s: Define o shell padrão para o usuário (por exemplo, /bin/bashComandoAbaixo).
+-G: Adiciona o usuário a grupos adicionais.
+Exemplo Completo com Opções
+Para adicionar um usuário com um diretório home e um shell específico:
+
+bashComandoAbaixo
+---------------------------------------------------------------------
+sudo useradd -m -s /bin/bashComandoAbaixo -G sudo novo_usuario
+sudo passwd novo_usuario
+Neste exemplo, o usuário novo_usuario será criado com um diretório home, o shell padrão configurado para /bin/bashComandoAbaixo, e adicionado ao grupo sudo para permissões administrativas.
+
+Usando o Comando adduser
+Em algumas distribuições, como Debian e Ubuntu, você pode usar o comando adduser, que é um script que facilita o processo de adição de usuários.
+
+Adicionar um Novo Usuário:
+
+bashComandoAbaixo
+---------------------------------------------------------------------
+sudo adduser novo_usuario
+Seguir as Instruções: O comando adduser pedirá para você fornecer uma senha e algumas informações adicionais, como o nome completo e outros detalhes.
+
+Resumo
+Para adicionar um usuário, você pode usar useradd ou adduser.
+Sempre defina uma senha para o usuário criado.
+Use opções adicionais para personalizar a criação do usuário conforme necessário.
+Se você tiver alguma dúvida ou precisar de mais informações, é só avisar!
+
+
+
+
+
+

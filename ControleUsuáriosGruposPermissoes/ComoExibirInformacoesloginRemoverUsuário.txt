@@ -1,0 +1,78 @@
+Para exibir informações de login de usuários e remover um usuário no Linux, você pode usar alguns comandos específicos. Abaixo estão os detalhes de como realizar essas tarefas.
+
+Exibir Informações de Login
+Usando o comando who:
+
+Exibe os usuários que estão atualmente logados no sistema.
+bashComandoAbaixo
+-----------------------------------------------------------
+who
+Usando o comando w:
+
+Fornece uma lista dos usuários logados e informações sobre o que estão fazendo.
+bashComandoAbaixo
+-----------------------------------------------------------
+w
+Usando o comando last:
+
+Exibe o histórico de logins dos usuários.
+bashComandoAbaixo
+-----------------------------------------------------------
+last
+Usando o comando finger:
+
+Mostra informações sobre os usuários, como nome, terminal, hora do login, e mais (pode não estar disponível em todas as distribuições).
+bashComandoAbaixo
+-----------------------------------------------------------
+finger
+Remover um Usuário
+Para remover um usuário do sistema, você pode usar o comando userdel. Aqui estão os passos:
+
+Remover um Usuário:
+
+A sintaxe básica do comando userdel é:
+bashComandoAbaixo
+-----------------------------------------------------------
+sudo userdel nome_do_usuario
+Exemplo:
+bashComandoAbaixo
+-----------------------------------------------------------
+sudo userdel usuario_para_remover
+Remover um Usuário e Seu Diretório Home:
+
+Para remover um usuário e seu diretório home (arquivos do usuário), você pode usar a opção -r:
+bashComandoAbaixo
+-----------------------------------------------------------
+sudo userdel -r nome_do_usuario
+Exemplo:
+bashComandoAbaixo
+-----------------------------------------------------------
+sudo userdel -r usuario_para_remover
+Exemplo Completo
+Exibir informações de login:
+
+bashComandoAbaixo
+-----------------------------------------------------------
+who
+w
+last
+Remover um usuário:
+
+bashComandoAbaixo
+-----------------------------------------------------------
+sudo userdel usuario_para_remover
+Remover um usuário e seu diretório home:
+
+bashComandoAbaixo
+-----------------------------------------------------------
+sudo userdel -r usuario_para_remover
+Considerações
+Permissões: Para executar os comandos de remoção de usuário, você precisará de permissões de superusuário, portanto, use sudo.
+Backup: Sempre faça backup de dados importantes antes de remover usuários e seus diretórios home, pois essa ação é irreversível.
+Se você tiver mais perguntas ou precisar de assistência adicional, sinta-se à vontade para perguntar!
+
+
+
+
+
+

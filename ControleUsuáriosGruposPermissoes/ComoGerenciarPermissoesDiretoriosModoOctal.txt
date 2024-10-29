@@ -1,0 +1,101 @@
+Gerenciar permissões em diretórios e arquivos no Linux é essencial para a segurança e organização do sistema. As permissões determinam quem pode ler, escrever ou executar um arquivo ou diretório. Aqui está um guia sobre como gerenciar permissões e o que é o modo octal.
+
+Estrutura de Permissões
+As permissões são divididas em três categorias:
+
+Usuário (Owner): O proprietário do arquivo ou diretório.
+Grupo: Os usuários que pertencem ao grupo associado ao arquivo ou diretório.
+Outros (Others): Todos os outros usuários.
+Cada categoria pode ter as seguintes permissões:
+
+Leitura (r): Permite ler o arquivo ou listar o diretório.
+Escrita (w): Permite modificar o arquivo ou adicionar/remover arquivos em um diretório.
+Execução (x): Permite executar um arquivo ou acessar um diretório.
+Exibir Permissões
+Para ver as permissões de um arquivo ou diretório, use o comando ls -l:
+
+bashComandoAbaixo
+------------------------------------------------------------------
+ls -l nome_do_arquivo_ou_diretorio
+A saída terá a seguinte aparência:
+
+csharp
+------------------------------------------------------------------
+drwxr-xr-- 2 usuario grupo 4096 out 29 12:00 nome_do_diretorio
+O primeiro caractere indica se é um diretório (d) ou um arquivo (-).
+Os próximos três caracteres são as permissões do usuário (owner), os próximos três do grupo e os últimos três para outros.
+Modo Octal
+O modo octal é uma forma numérica de representar permissões. Cada tipo de permissão tem um valor numérico:
+
+Leitura (r): 4
+Escrita (w): 2
+Execução (x): 1
+Você pode somar esses valores para determinar as permissões. Por exemplo:
+
+rwx (leitura, escrita, execução) = 4 + 2 + 1 = 7
+r-x (leitura, execução) = 4 + 0 + 1 = 5
+r-- (somente leitura) = 4 + 0 + 0 = 4
+--- (sem permissões) = 0
+Definindo Permissões
+Você pode usar o comando chmod para alterar as permissões. A sintaxe é:
+
+bashComandoAbaixo
+------------------------------------------------------------------
+chmod [modo] nome_do_arquivo_ou_diretorio
+Usando Modo Octal
+Para definir permissões usando o modo octal, você pode usar:
+
+bashComandoAbaixo
+------------------------------------------------------------------
+chmod 755 nome_do_arquivo_ou_diretorio
+Neste exemplo:
+
+7 (rwx) para o proprietário
+5 (r-x) para o grupo
+5 (r-x) para outros
+Usando Modo Simbólico
+Você também pode usar o modo simbólico para adicionar ou remover permissões:
+
+Para adicionar permissões:
+bashComandoAbaixo
+------------------------------------------------------------------
+chmod u+x nome_do_arquivo  # Adiciona permissão de execução para o proprietário
+Para remover permissões:
+bashComandoAbaixo
+------------------------------------------------------------------
+chmod g-w nome_do_arquivo  # Remove permissão de escrita para o grupo
+Exemplo Completo
+Verificar permissões:
+
+bashComandoAbaixo
+------------------------------------------------------------------
+ls -l meu_diretorio
+Alterar permissões para todos poderem ler e executar, mas apenas o proprietário poder escrever:
+
+bashComandoAbaixo
+------------------------------------------------------------------
+chmod 755 meu_diretorio
+Adicionar permissão de execução para o grupo:
+
+bashComandoAbaixo
+------------------------------------------------------------------
+chmod g+x meu_diretorio
+Remover permissão de escrita para outros:
+
+bashComandoAbaixo
+------------------------------------------------------------------
+chmod o-w meu_diretorio
+Resumo
+Permissões: Controlam quem pode acessar e modificar arquivos e diretórios.
+Modo Octal: Representa permissões numericamente (r=4, w=2, x=1).
+Comando chmod: Usado para alterar permissões.
+Se você tiver mais perguntas ou precisar de mais detalhes, é só avisar!
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,87 @@
+Aqui estão os principais comandos para manipulação de diretórios no Linux:
+
+Comandos para Manipulação de Diretórios
+pwd (Print Working Directory)
+
+Exibe o diretório atual em que você está.
+bashComandoAbaixo
+-------------------------------------------------------
+pwd
+ls (List)
+
+Lista os arquivos e diretórios no diretório atual.
+Opções úteis:
+ls -l: Lista em formato detalhado (permissões, proprietário, tamanho, etc.).
+ls -a: Mostra arquivos ocultos (arquivos que começam com .).
+ls -lh: Lista em formato legível para humanos (mostra o tamanho em KB, MB, etc.).
+bashComandoAbaixo
+-------------------------------------------------------
+ls -lha
+cd (Change Directory)
+
+Navega entre diretórios.
+Para voltar um nível, use cd ...
+Para ir ao diretório raiz, use cd /.
+Para ir ao diretório inicial do usuário, use cd ~ ou simplesmente cd.
+bashComandoAbaixo
+-------------------------------------------------------
+cd /caminho/do/diretorio
+cd ..
+mkdir (Make Directory)
+
+Cria um novo diretório.
+Para criar diretórios aninhados, use -p.
+bashComandoAbaixo
+-------------------------------------------------------
+mkdir novo_diretorio
+mkdir -p pasta1/pasta2/pasta3
+rmdir (Remove Directory)
+
+Remove diretórios vazios.
+bashComandoAbaixo
+-------------------------------------------------------
+rmdir diretorio_vazio
+rm -r (Remove Recursively)
+
+Remove diretórios e seu conteúdo recursivamente (diretórios não precisam estar vazios).
+Cuidado: Esse comando apaga todo o conteúdo do diretório sem recuperação.
+bashComandoAbaixo
+-------------------------------------------------------
+rm -r diretorio
+cp -r (Copy Recursively)
+
+Copia um diretório e seu conteúdo recursivamente.
+bashComandoAbaixo
+-------------------------------------------------------
+cp -r pasta_origem pasta_destino
+mv (Move)
+
+Move ou renomeia diretórios.
+bashComandoAbaixo
+-------------------------------------------------------
+mv pasta_antiga nova_pasta
+mv /caminho/pasta_origem /caminho/novo_destino
+find (Buscar)
+
+Busca arquivos ou diretórios a partir do diretório especificado.
+Exemplos:
+Para encontrar um diretório com nome específico:
+bashComandoAbaixo
+-------------------------------------------------------
+find /caminho/de/inicio -type d -name "nome_diretorio"
+tree
+
+Mostra a estrutura de diretórios em formato de árvore (pode precisar ser instalado).
+bashComandoAbaixo
+-------------------------------------------------------
+tree /caminho
+du (Disk Usage)
+
+Mostra o uso de espaço em disco por diretórios.
+Exemplos:
+du -h: Mostra o uso de disco de forma legível.
+du -sh diretorio: Mostra o tamanho total de um diretório específico.
+bashComandoAbaixo
+-------------------------------------------------------
+du -sh /caminho/do/diretorio
+Esses comandos são úteis para navegação, organização e manipulação de diretórios no Linux, facilitando a administração e o gerenciamento do sistema de arquivos.

@@ -1,0 +1,48 @@
+Navegação no Terminal
+Ctrl + A: Move o cursor para o início da linha.
+Ctrl + E: Move o cursor para o final da linha.
+Alt + F: Move o cursor uma palavra à frente.
+Alt + B: Move o cursor uma palavra para trás.
+Ctrl + U: Apaga tudo da posição do cursor até o início da linha.
+Ctrl + K: Apaga tudo da posição do cursor até o final da linha.
+Ctrl + W: Apaga a palavra antes do cursor.
+Ctrl + Y: Cola o texto mais recentemente excluído.
+Alt + .: Insere o último argumento do último comando.
+Tab: Completa automaticamente comandos, caminhos e arquivos.
+Ctrl + L: Limpa o terminal (equivalente ao comando clear).
+Edição de Comandos
+Ctrl + D: Encerra o terminal, similar ao comando exit.
+Ctrl + C: Interrompe o comando em execução.
+Ctrl + Z: Suspende o comando em execução (você pode retomá-lo com o comando fg).
+Ctrl + R: Pesquisa no histórico de comandos (reversa).
+Ctrl + G: Cancela a pesquisa no histórico de comandos.
+Alt + R: Desfaz a última modificação de um comando.
+Ctrl + _ ou Ctrl + Shift + -: Desfaz a última ação.
+Histórico de Comandos
+Ctrl + P: Exibe o comando anterior (equivalente à tecla ↑).
+Ctrl + N: Exibe o próximo comando (equivalente à tecla ↓).
+!!: Executa o último comando novamente.
+!n: Executa o n-ésimo comando do histórico (substitua n pelo número do comando).
+!string: Executa o último comando que começa com string.
+Manipulação de Processos
+Ctrl + Z: Suspende o processo em execução.
+fg: Retoma o processo suspenso para o primeiro plano.
+bg: Retoma o processo suspenso em segundo plano.
+jobs: Lista todos os processos em execução em segundo plano ou suspensos.
+Controle de Janelas
+Ctrl + Shift + T: Abre uma nova aba no terminal (funciona em alguns emuladores de terminal).
+Ctrl + Shift + W: Fecha a aba atual do terminal.
+Ctrl + Shift + N ou Ctrl + Alt + →: Alterna para a próxima aba.
+Ctrl + Shift + P ou Ctrl + Alt + ←: Alterna para a aba anterior.
+Copiar e Colar
+Ctrl + Shift + C: Copia o texto selecionado no terminal.
+Ctrl + Shift + V: Cola o texto no terminal.
+Desligar/Reiniciar o Terminal
+Alt + F2: Abre um terminal de login alternativo.
+Alt + F1 a F6: Alterna entre terminais virtuais (TTYs).
+Alt + F7: Volta ao terminal gráfico padrão.
+Ctrl + Alt + Del: Reinicia o sistema (pode precisar de permissão).
+Atalhos Específicos do Bash
+Ctrl + X + E: Abre o editor de texto padrão para editar o comando atual.
+Esc + .: Insere o último argumento do comando anterior.
+Ctrl + X + Ctrl + E: Abre o editor padrão para edição de um comando longo.

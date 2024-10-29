@@ -1,0 +1,89 @@
+
+Os comandos rpm e yum são usados em distribuições Linux baseadas no Red Hat, como CentOS, Fedora e RHEL (Red Hat Enterprise Linux). Aqui está um resumo sobre cada um deles, incluindo como usá-los.
+
+Comando rpm
+O rpm (Red Hat Package Manager) é uma ferramenta de gerenciamento de pacotes de baixo nível que lida diretamente com arquivos de pacotes .rpm. Ele não resolve automaticamente dependências, portanto, é comumente utilizado em combinação com o yum ou dnf para instalar pacotes.
+
+Comandos Comuns do rpm
+Instalar um Pacote:
+
+bashComandoAbaixo
+------------------------------------------------------------------
+sudo rpm -ivh pacote.rpm
+-i: instala um pacote.
+-v: modo verboso (mostra mais detalhes durante a instalação).
+-h: mostra uma barra de progresso durante a instalação.
+Remover um Pacote:
+
+bashComandoAbaixo
+------------------------------------------------------------------
+sudo rpm -e nome-do-pacote
+Atualizar um Pacote:
+
+bashComandoAbaixo
+------------------------------------------------------------------
+sudo rpm -Uvh pacote.rpm
+-U: atualiza um pacote, instalando se não existir.
+Verificar se um Pacote Está Instalado:
+
+bashComandoAbaixo
+------------------------------------------------------------------
+rpm -q nome-do-pacote
+Listar todos os Pacotes Instalados:
+
+bashComandoAbaixo
+------------------------------------------------------------------
+rpm -qa
+Listar Arquivos de um Pacote Instalado:
+
+bashComandoAbaixo
+------------------------------------------------------------------
+rpm -ql nome-do-pacote
+Verificar a Integridade de um Pacote Instalado:
+
+bashComandoAbaixo
+------------------------------------------------------------------
+rpm -V nome-do-pacote
+Comando yum
+O yum (Yellowdog Updater Modified) é um gerenciador de pacotes de alto nível que resolve automaticamente as dependências e facilita a instalação, atualização e remoção de pacotes. O yum foi amplamente substituído pelo dnf nas versões mais recentes do Fedora, mas ainda é comum em outras distribuições.
+
+Comandos Comuns do yum
+Instalar um Pacote:
+
+bashComandoAbaixo
+------------------------------------------------------------------
+sudo yum install nome-do-pacote
+Remover um Pacote:
+
+bashComandoAbaixo
+------------------------------------------------------------------
+sudo yum remove nome-do-pacote
+Atualizar Todos os Pacotes do Sistema:
+
+bashComandoAbaixo
+------------------------------------------------------------------
+sudo yum update
+Buscar um Pacote:
+
+bashComandoAbaixo
+------------------------------------------------------------------
+yum search nome-do-pacote
+Listar Pacotes Disponíveis:
+
+bashComandoAbaixo
+------------------------------------------------------------------
+yum list available
+Exibir Informações sobre um Pacote:
+
+bashComandoAbaixo
+------------------------------------------------------------------
+yum info nome-do-pacote
+Limpar Cache:
+
+bashComandoAbaixo
+------------------------------------------------------------------
+sudo yum clean all
+Resumo
+rpm: Utilizado para gerenciar pacotes individuais sem resolver dependências. É útil para tarefas como instalar ou remover pacotes diretamente.
+yum: Um gerenciador de pacotes de alto nível que lida com dependências automaticamente, tornando a instalação e manutenção de pacotes muito mais simples.
+Ambos os comandos são essenciais para gerenciar software em distribuições baseadas em Red Hat e são frequentemente utilizados por administradores de sistemas e desenvolvedores.

@@ -1,0 +1,90 @@
+O comando ifconfig (interface configuration) é utilizado em sistemas Linux e Unix para configurar, gerenciar e verificar as interfaces de rede. Esse comando exibe informações sobre cada interface de rede presente no sistema e é útil para tarefas como atribuir endereços IP, configurar máscaras de sub-rede e visualizar o status de conexões.
+
+Nota: Em muitas distribuições Linux modernas, o ifconfig foi substituído pelo comando ip (parte do pacote iproute2). No entanto, ele ainda é amplamente utilizado em algumas distribuições e ambientes.
+
+Sintaxe Básica
+bashComandoAbaixo
+-------------------------------------------------------
+ifconfig [interface] [opções]
+Principais Opções e Usos do ifconfig
+Exibir Configurações de Rede
+
+Sem nenhuma opção ou nome de interface, o ifconfig exibe informações sobre todas as interfaces de rede ativas.
+
+bashComandoAbaixo
+-------------------------------------------------------
+ifconfig
+Se você quiser informações sobre uma interface específica (ex.: eth0):
+
+bashComandoAbaixo
+-------------------------------------------------------
+ifconfig eth0
+Atribuir um Endereço IP
+
+O comando ifconfig permite atribuir manualmente um endereço IP a uma interface. No exemplo abaixo, atribuímos o IP 192.168.1.10 com máscara de sub-rede 255.255.255.0 à interface eth0.
+
+bashComandoAbaixo
+-------------------------------------------------------
+sudo ifconfig eth0 192.168.1.10 netmask 255.255.255.0
+Ativar uma Interface de Rede
+
+Ativa uma interface de rede específica, permitindo que ela envie e receba dados.
+
+bashComandoAbaixo
+-------------------------------------------------------
+sudo ifconfig eth0 up
+Desativar uma Interface de Rede
+
+Desativa uma interface de rede, interrompendo o envio e recebimento de dados.
+
+bashComandoAbaixo
+-------------------------------------------------------
+sudo ifconfig eth0 down
+Alterar o Endereço MAC
+
+Altera o endereço MAC da interface (alguns sistemas e interfaces de rede podem restringir essa ação).
+
+bashComandoAbaixo
+-------------------------------------------------------
+sudo ifconfig eth0 hw ether XX:XX:XX:XX:XX:XX
+Configurar uma Rota de Transmissão
+
+Atribui um endereço de transmissão a uma interface de rede.
+
+bashComandoAbaixo
+-------------------------------------------------------
+sudo ifconfig eth0 broadcast 192.168.1.255
+Configurar uma MTU (Unidade Máxima de Transmissão)
+
+Define a MTU (tamanho máximo dos pacotes) para uma interface.
+
+bashComandoAbaixo
+-------------------------------------------------------
+sudo ifconfig eth0 mtu 1400
+Exemplo de Saída do Comando ifconfig
+A saída do ifconfig para uma interface geralmente inclui:
+
+plaintext
+-------------------------------------------------------
+eth0      Link encap:Ethernet  HWaddr XX:XX:XX:XX:XX:XX  
+          inet addr:192.168.1.10  Bcast:192.168.1.255  Mask:255.255.255.0
+          inet6 addr: fe80::1234:abcd:5678:9abc/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:12345 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:12345 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:12345678 (12.3 MB)  TX bytes:12345678 (12.3 MB)
+Campos Importantes
+inet addr: Endereço IP da interface.
+Bcast: Endereço de broadcast.
+Mask: Máscara de sub-rede.
+HWaddr: Endereço MAC.
+RX/TX packets: Número de pacotes recebidos e transmitidos.
+RX/TX bytes: Volume total de dados recebidos e transmitidos.
+Apesar de ifconfig ser menos comum em sistemas modernos, ele ainda é útil para gerenciar interfaces de rede, especialmente em sistemas mais antigos. Em distribuições Linux mais recentes, o comando ip (ex.: ip addr, ip link) é preferido por ser mais abrangente e flexível.
+
+
+
+
+
+

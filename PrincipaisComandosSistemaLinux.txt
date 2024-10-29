@@ -1,0 +1,95 @@
+Principais Comandos de Sistema no Linux
+uname
+
+Exibe informações sobre o sistema.
+
+Copiar código
+uname -a  # Mostra informações detalhadas do sistema
+uptime
+
+Mostra há quanto tempo o sistema está em execução e a carga média.
+
+Copiar código
+uptime
+top
+
+Monitora processos em tempo real, mostrando o uso de CPU, memória e outras métricas.
+
+Copiar código
+top
+ps
+
+Mostra uma lista de processos em execução.
+
+Copiar código
+ps aux  # Exibe todos os processos do sistema
+df
+
+Mostra o uso do espaço em disco.
+Opção -h exibe o tamanho em formato legível para humanos.
+
+Copiar código
+df -h
+du
+
+Exibe o uso de espaço em disco para diretórios e arquivos.
+
+Copiar código
+du -sh /caminho/do/diretorio  # Tamanho total de um diretório específico
+free
+
+Exibe informações de uso de memória (RAM).
+
+Copiar código
+free -h
+kill
+
+Encerra processos específicos usando seu ID de processo (PID).
+
+Copiar código
+kill PID
+reboot e shutdown
+
+Reinicia ou desliga o sistema.
+
+Copiar código
+sudo reboot  # Reinicia o sistema
+sudo shutdown now  # Desliga imediatamente
+sudo shutdown -r +10  # Reinicia em 10 minutos
+whoami
+
+Exibe o nome do usuário atualmente logado.
+
+Copiar código
+whoami
+chmod
+
+Modifica permissões de arquivos e diretórios.
+
+Copiar código
+chmod 755 arquivo.sh  # Permissões de leitura e execução para todos e de gravação para o proprietário
+chown
+
+Altera o proprietário de arquivos e diretórios.
+
+Copiar código
+sudo chown usuario:grupo arquivo.txt
+history
+
+Exibe o histórico de comandos executados no terminal.
+
+Copiar código
+history
+crontab
+
+Agendamento de tarefas para execução automática em intervalos de tempo específicos.
+
+Copiar código
+crontab -e  # Edita o agendamento de tarefas do usuário
+Esses diretórios e comandos cobrem a maioria das operações essenciais para gerenciar, monitorar e organizar o sistema Linux.
+
+
+
+
+
+

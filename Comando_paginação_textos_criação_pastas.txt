@@ -1,0 +1,68 @@
+Aqui estão os comandos de paginação de textos e criação de pastas no Linux.
+
+Comandos de Paginação de Textos
+A paginação permite visualizar textos longos, linha por linha ou página por página, o que é útil para arquivos grandes.
+
+less
+
+Exibe o conteúdo de um arquivo página por página, com a opção de rolar o texto.
+Comandos úteis dentro do less:
+Enter: Move uma linha para baixo.
+Espaço: Move uma página para baixo.
+q: Sai do less.
+bashComandoAbaixo
+--------------------------------
+less arquivo.txt
+more
+
+Similar ao less, mas com funcionalidades um pouco mais limitadas.
+Comandos úteis dentro do more:
+Enter: Move uma linha para baixo.
+Espaço: Move uma página para baixo.
+q: Sai do more.
+bashComandoAbaixo
+--------------------------------
+more arquivo.txt
+head
+
+Mostra as primeiras 10 linhas de um arquivo (pode ser ajustado com -n para exibir mais ou menos linhas).
+bashComandoAbaixo
+--------------------------------
+head arquivo.txt
+head -n 20 arquivo.txt  # Mostra as primeiras 20 linhas
+tail
+
+Mostra as últimas 10 linhas de um arquivo, útil para logs em tempo real.
+Para ver as últimas 20 linhas:
+bashComandoAbaixo
+--------------------------------
+tail -n 20 arquivo.txt
+Para acompanhar novas linhas adicionadas ao arquivo:
+bashComandoAbaixo
+--------------------------------
+tail -f arquivo.txt
+Comandos para Criação de Pastas
+mkdir
+
+O comando mkdir (make directory) cria novas pastas (diretórios).
+Sintaxe básica:
+bashComandoAbaixo
+--------------------------------
+mkdir nome_da_pasta
+Criar Diretórios Aninhados
+
+Para criar uma estrutura de pastas aninhadas em um único comando, use -p:
+bashComandoAbaixo
+--------------------------------
+mkdir -p pasta1/pasta2/pasta3
+O comando acima criará pasta1, pasta2 dentro de pasta1, e pasta3 dentro de pasta2, se elas não existirem.
+Verificar Estrutura da Pasta
+
+Após criar as pastas, você pode verificar a estrutura usando tree (se estiver instalado) ou ls -R para ver uma listagem recursiva:
+bashComandoAbaixo
+--------------------------------
+tree pasta1
+bashComandoAbaixo
+--------------------------------
+ls -R pasta1
+Esses comandos cobrem os básicos para paginação e criação de pastas no Linux!

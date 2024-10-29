@@ -1,0 +1,169 @@
+Aqui está uma visão geral dos comandos last, reboot, route, time, cowsay e cmatrix no Linux. Esses comandos têm diversas funcionalidades, desde monitoramento do sistema até entretenimento.
+
+1. Comando last
+O comando last é usado para exibir informações sobre as últimas sessões de login dos usuários no sistema.
+
+Uso básico
+bashComandoAbaixo
+------------------------------------------------------------------
+last
+Isso listará as últimas sessões de login, mostrando o nome do usuário, o terminal, o horário de login e o tempo de sessão.
+
+Exibir informações sobre um usuário específico
+Para ver as entradas de um usuário específico, você pode passar o nome do usuário como argumento:
+
+bashComandoAbaixo
+------------------------------------------------------------------
+last nome_do_usuario
+Ver as entradas de logout
+O comando last também mostra quando os usuários se desconectaram.
+
+Limitar a quantidade de entradas exibidas
+Para limitar o número de entradas exibidas, use a opção -n:
+
+bashComandoAbaixo
+------------------------------------------------------------------
+last -n 10
+2. Comando reboot
+O comando reboot é usado para reiniciar o sistema.
+
+Reiniciar o sistema
+bashComandoAbaixo
+------------------------------------------------------------------
+sudo reboot
+Esse comando requer permissões de superusuário e reiniciará imediatamente o sistema.
+
+Programar um reinício
+Você também pode programar um reinício usando o comando:
+
+bashComandoAbaixo
+------------------------------------------------------------------
+sudo shutdown -r +10
+Isso reiniciará o sistema em 10 minutos. Você pode cancelar o comando com:
+
+bashComandoAbaixo
+------------------------------------------------------------------
+sudo shutdown -c
+3. Comando route
+O comando route é usado para visualizar e manipular a tabela de roteamento do sistema.
+
+Exibir a tabela de roteamento
+Para visualizar a tabela de roteamento:
+
+bashComandoAbaixo
+------------------------------------------------------------------
+route -n
+O -n exibe os endereços IP em vez de nomes de host.
+
+Adicionar uma nova rota
+Para adicionar uma nova rota:
+
+bashComandoAbaixo
+------------------------------------------------------------------
+sudo route add -net 192.168.1.0/24 gw 192.168.1.1
+Isso adiciona uma rota para a rede 192.168.1.0 com o gateway 192.168.1.1.
+
+Remover uma rota
+Para remover uma rota:
+
+bashComandoAbaixo
+------------------------------------------------------------------
+sudo route del -net 192.168.1.0/24
+4. Comando time
+O comando time é usado para medir o tempo que um comando leva para ser executado.
+
+Medir o tempo de execução de um comando
+bashComandoAbaixo
+------------------------------------------------------------------
+time ls -l
+Após a execução, o time mostrará o tempo real, o tempo de CPU usado no modo usuário e no modo sistema.
+
+Formatando a saída
+Para obter a saída de forma mais detalhada, você pode usar a opção -v:
+
+bashComandoAbaixo
+------------------------------------------------------------------
+/usr/bin/time -v ls -l
+5. Comando cowsay
+O cowsay é um programa de divertimento que exibe uma mensagem dentro de um balão de fala, "falada" por uma vaca ASCII.
+
+Uso básico
+Para usar cowsay, basta digitar:
+
+bashComandoAbaixo
+------------------------------------------------------------------
+cowsay "Olá, mundo!"
+Você verá uma vaca com a mensagem "Olá, mundo!" dentro de um balão de fala.
+
+Usar outros animais
+Você também pode usar outros animais substituindo a vaca. Para listar os animais disponíveis:
+
+bashComandoAbaixo
+------------------------------------------------------------------
+cowsay -l
+Para usar outro animal:
+
+bashComandoAbaixo
+------------------------------------------------------------------
+cowsay -f tux "Olá, mundo!"
+6. Comando cmatrix
+O cmatrix é um programa que simula a tela do "Matrix", mostrando uma cascata de caracteres.
+
+Executar cmatrix
+Para iniciar o cmatrix, simplesmente digite:
+
+bashComandoAbaixo
+------------------------------------------------------------------
+cmatrix
+Para sair, você pode pressionar Ctrl + C.
+
+Personalização
+Você pode personalizar a aparência do cmatrix com algumas opções:
+
+-C: Define a cor. Por exemplo, -C green para texto verde.
+-s: Para ativar o modo "siga o cursor".
+Exemplo de uso:
+
+bashComandoAbaixo
+------------------------------------------------------------------
+cmatrix -C green -s
+Resumo dos Comandos
+Comando	Função
+last	Mostra as últimas sessões de login
+reboot	Reinicia o sistema
+route	Exibe ou manipula a tabela de roteamento
+time	Mede o tempo de execução de um comando
+cowsay	Mostra uma mensagem dentro de um balão de fala com uma vaca ASCII
+cmatrix	Simula a tela do "Matrix" com caracteres
+Exemplos Práticos
+Visualizar as últimas sessões de login:
+
+bashComandoAbaixo
+------------------------------------------------------------------
+last
+Reiniciar o sistema imediatamente:
+
+bashComandoAbaixo
+------------------------------------------------------------------
+sudo reboot
+Adicionar uma nova rota:
+
+bashComandoAbaixo
+------------------------------------------------------------------
+sudo route add -net 192.168.1.0/24 gw 192.168.1.1
+Medir o tempo de execução de um comando:
+
+bashComandoAbaixo
+------------------------------------------------------------------
+time ls -l
+Exibir uma mensagem com cowsay:
+
+bashComandoAbaixo
+------------------------------------------------------------------
+cowsay "Bem-vindo ao Linux!"
+Executar cmatrix:
+
+bashComandoAbaixo
+------------------------------------------------------------------
+cmatrix
+Se você tiver mais perguntas ou precisar de mais detalhes sobre algum desses comandos, sinta-se à vontade para perguntar!
