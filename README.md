@@ -1,3 +1,3 @@
-Usar Linux é como ter o controle total do seu próprio computador, e isso é libertador.
+Usar o Linux é ter controle total sobre o seu computador — e isso é libertador.
 
-# Evoluindo os estudos em Linux e iniciando a preparação para certificações
+Evoluindo os estudos em Linux e iniciando a preparação para certificações
